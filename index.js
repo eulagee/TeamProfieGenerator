@@ -1,47 +1,46 @@
+const generateHTML = require('./src/generateHTML')
+
+const Manager = require("./lib/Manager");
+const Engineer = require("./lib/Engineer");
+const Intern = require("./lib/Intern");
+
 const inquirer = require("inquirer");
-const Manager = require("../Develop/lib/Manager");
-const Engineer = require("../Develop/lib/Engineer");
-const Intern = require("../Develop/lib/Intern");
+const fs = require('fs');
 
-const renderApp = require("./renderApp");
 
-var teamArr = []
-
-//start the prompt...
-askForManagerInfo();
 
 // Prompts the user for Manager Info
-function firstQuestion() {
-    inquirer
-        .prompt([{
-                type: "input",
-                message: "What is your manager's name?",
-                name: "name"
-            },
-            {
-                type: "input",
-                message: "What is your manager's id?",
-                name: "id"
-            },
-            {
-                type: "input",
-                message: "What is your manager's email?",
-                name: "email"
-            },
-            {
-                type: "input",
-                message: "What is your manager's office number?",
-                name: "officeNumber"
-            }
-        ]).then(function(response) {
-            const manager = new Manager(response.name, response.id, response.email, response.officeNumber)
-            teamArr.push(manager)
-            console.log(teamArr)
-            askForRole()
-        })
+function askForManagerInfo () {
+        inquirer
+            .prompt([{
+                    type: "input",
+                    message: "What is your manager's name?",
+                    name: "name"
+                },
+                {
+                    type: "input",
+                    message: "What is your manager's id?",
+                    name: "id"
+                },
+                {
+                    type: "input",
+                    message: "What is your manager's email?",
+                    name: "email"
+                },
+                {
+                    type: "input",
+                    message: "What is your manager's office number?",
+                    name: "officeNumber"
+                }
+            ]).then(function(response) {
+                const manager = new Manager(response.name, response.id, response.email, response.officeNumber)
+                teamArr.push(manager)
+                console.log(teamArr)
+                askForRole()
+            })
 
-}
-// Prompts the user if they would like to add another team member.......
+    }
+    // Prompts the user if they would like to add another team member.......
 function askForRole() {
     inquirer.prompt([{
         type: 'list',

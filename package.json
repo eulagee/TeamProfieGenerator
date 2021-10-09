@@ -1,26 +1,30 @@
 {
-  "name": "teamprofiegenerator",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "directories": {
-    "lib": "lib",
-    "test": "tests"
-  },
-  "scripts": {
-    "test": "jest"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/eulagee/TeamProfieGenerator.git"
-  },
-  "author": "eulalie geonzon",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/eulagee/TeamProfieGenerator/issues"
-  },
-  "homepage": "https://github.com/eulagee/TeamProfieGenerator#readme",
-  "dependencies": {
-    "jest": "^27.0.6"
-  }
+    "name": "teamprofiegenerator",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "directories": {
+        "lib": "lib",
+        "test": "tests"
+    },
+    "scripts": {
+        "test": "jest"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/eulagee/TeamProfieGenerator.git"
+    },
+    "author": "eulalie geonzon",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/eulagee/TeamProfieGenerator/issues"
+    },
+    "homepage": "https://github.com/eulagee/TeamProfieGenerator#readme",
+    "dependencies": {
+        "inquirer": "^8.2.0",
+        "inquirer-loop": "^0.3.0"
+    },
+    "devDependencies": {
+        "jest": "^27.2.4"
+    }
 }

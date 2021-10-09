@@ -1,0 +1,138 @@
+:root {
+    --yellow: yellow;
+    --off-white: #eea931;
+    --white: #eef4f7;
+    --light-charcoal: #ec3030;
+    --card: #9fe3ee;
+    --mgr: #8ed25d;
+    --engineer: #d19376;
+    --intern: #b3b859;
+    --link: #4596A2
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    background-color: var(--yellow);
+}
+
+.container {
+    margin-bottom: 40px;
+}
+
+nav {
+    height: 150px;
+    margin-bottom: 40px;
+    justify-content: center;
+    background-color: var(--yellow);
+}
+
+nav h1 {
+    margin: 0px;
+}
+
+#nav-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.row .col.l4 {
+    margin-left: 0px;
+}
+
+.card {
+    box-shadow: var(--light-charcoal) 8px 8px 8px;
+    border-radius: 5%;
+}
+
+.card-body {
+    text-align: center;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.card .card-content {
+    color: var(--yellow);
+    border-radius: 10px 10px 0 0;
+}
+
+.card .mgr {
+    background-color: var(--mgr);
+}
+
+.card .engineer {
+    background-color: var(--engineer);
+}
+
+.card .intern {
+    background-color: var(--intern);
+}
+
+.card .card-title {
+    font-weight: 1000;
+    text-align: center;
+}
+
+.card-content p {
+    font-size: 18px;
+    padding-top: 12px;
+    text-align: center;
+}
+
+.card .card-action {
+    height: 180px;
+    font-size: 18px;
+    background-color: var(--off-white);
+}
+
+.card .card-action:last-child {
+    border-radius: 0 0 10px 10px;
+    border: solid .25px var(--card);
+}
+
+.card-action div {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-left: solid 1px var(--white);
+    border-right: solid 1px var(--white);
+    border-bottom: solid 1px var(--white);
+}
+
+.id {
+    border-top: 1px solid var(--white);
+    margin-top: 10px;
+}
+
+.card-action div span {
+    padding-right: 8px;
+    margin-left: 8px;
+    color: var(--card);
+}
+
+.card-action div a {
+    margin-left: 8px;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.card .card-action a:not(.btn):not(.btn-large):not(.btn-small):not(.btn-large):not(.btn-floating) {
+    color: var(--link);
+    font-weight: 600;
+}
+
+.card .card-action a:not(.btn):not(.btn-large):not(.btn-small):not(.btn-large):not(.btn-floating):hover {
+    color: var(--engineer);
+    font-weight: 800;
+}
+
+@media screen and (max-width:600px) {
+    .nav-wrapper span {
+        display: none;
+    }
+}

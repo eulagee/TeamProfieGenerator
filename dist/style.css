@@ -1,0 +1,20 @@
+body {
+    background-color: rgb(240, 255, 70);
+}
+
+.jumbotron {
+    background-color: rgb(6, 2, 2);
+}
+
+.text-center {
+    color: white;
+}
+
+.team-area {
+    justify-content: center;
+}
+
+.card-header {
+    background-color: rgb(227, 255, 45);
+    color: white;
+}
